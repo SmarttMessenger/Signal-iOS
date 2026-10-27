@@ -155,18 +155,18 @@ public class TSConstantsProduction: TSConstantsProtocol {
 
     public init() {}
 
-    public let mainServiceIdentifiedURL = "https://chat.signal.org"
-    public let mainServiceUnidentifiedURL = "https://ud-chat.signal.org"
-    public let textSecureCDN0ServerURL = "https://cdn.signal.org"
-    public let textSecureCDN2ServerURL = "https://cdn2.signal.org"
-    public let textSecureCDN3ServerURL = "https://cdn3.signal.org"
-    public let storageServiceURL = "https://storage.signal.org"
+    public let mainServiceIdentifiedURL = "https://chat.staging.smarttmessenger.com"
+    public let mainServiceUnidentifiedURL = "https://chat.staging.smarttmessenger.com"
+    public let textSecureCDN0ServerURL = "https://cdn.staging.smarttmessenger.com"
+    public let textSecureCDN2ServerURL = "https://cdn2.staging.smarttmessenger.com"
+    public let textSecureCDN3ServerURL = "https://cdn3.staging.smarttmessenger.com"
+    public let storageServiceURL = "https://storage.staging.smarttmessenger.com"
     public let sfuURL = "https://sfu.voip.signal.org"
     public let sfuTestURL = "https://sfu.test.voip.signal.org"
     public let svr2URL = "wss://svr2.signal.org"
-    public let registrationCaptchaURL = "https://signalcaptchas.org/registration/generate.html"
-    public let challengeCaptchaURL = "https://signalcaptchas.org/challenge/generate.html"
-    public let kUDTrustRoot = "BXu6QIKVz5MA8gstzfOgRQGqyLqOwNKHL6INkv3IHWMF"
+    public let registrationCaptchaURL = "https://captchas.smarttmessenger.com/registration/generate.html"
+    public let challengeCaptchaURL = "https://captchas.smarttmessenger.com/challenge/generate.html"
+    public let kUDTrustRoot = "BT9a+6LT6PKD4ToFOYSsn4Ep67Bii+Clg9rkIAJDU1k4"
     public let updatesURL = "https://updates.signal.org"
     public let updates2URL = "https://updates2.signal.org"
 
@@ -196,11 +196,11 @@ public class TSConstantsProduction: TSConstantsProtocol {
     /// We *might* need to clear credentials (or perform some other migration)
     /// when this value changes, depending on how it's changing. If you do need
     /// to perform a migration, check out `ZkParamsMigrator`.
-    public let serverPublicParams = Data(base64Encoded: "AMhf5ywVwITZMsff/eCyudZx9JDmkkkbV6PInzG4p8x3VqVJSFiMvnvlEKWuRob/1eaIetR31IYeAbm0NdOuHH8Qi+Rexi1wLlpzIo1gstHWBfZzy1+qHRV5A4TqPp15YzBPm0WSggW6PbSn+F4lf57VCnHF7p8SvzAA2ZZJPYJURt8X7bbg+H3i+PEjH9DXItNEqs2sNcug37xZQDLm7X36nOoGPs54XsEGzPdEV+itQNGUFEjY6X9Uv+Acuks7NpyGvCoKxGwgKgE5XyJ+nNKlyHHOLb6N1NuHyBrZrgtY/JYJHRooo5CEqYKBqdFnmbTVGEkCvJKxLnjwKWf+fEPoWeQFj5ObDjcKMZf2Jm2Ae69x+ikU5gBXsRmoF94GXTLfN0/vLt98KDPnxwAQL9j5V1jGOY8jQl6MLxEs56cwXN0dqCnImzVH3TZT1cJ8SW1BRX6qIVxEzjsSGx3yxF3suAilPMqGRp4ffyopjMD1JXiKR2RwLKzizUe5e8XyGOy9fplzhw3jVzTRyUZTRSZKkMLWcQ/gv0E4aONNqs4P+NameAZYOD12qRkxosQQP5uux6B2nRyZ7sAV54DgFyLiRcq1FvwKw2EPQdk4HDoePrO/RNUbyNddnM/mMgj4FW65xCoT1LmjrIjsv/Ggdlx46ueczhMgtBunx1/w8k8V+l8LVZ8gAT6wkU5J+DPQalQguMg12Jzug3q4TbdHiGCmD9EunCwOmsLuLJkz6EcSYXtrlDEnAM+hicw7iergYLLlMXpfTdGxJCWJmP4zqUFeTTmsmhsjGBt7NiEB/9pFFEB3pSbf4iiUukw63Eo8Aqnf4iwob6X1QviCWuc8t0LUlT9vALgh/f2DPVOOmR0RW6bgRvc7DSF20V/omg+YBw==")!
+    public let serverPublicParams = Data(base64Encoded: "AJbCOtPUcjSGgW7Mci6LmYRjQysUxZj+UyYltCbsK9cmLI+Xc8P+droZF4C0sFs709t76BQFz6SQVvpptuM4UF88/mTEKWs661/WhL9NfotIGN3LpElsDdBqGYX9vYzlVXDx7l/Lx1PND6r8enBKaCplMtJNV7aiH80wQJBokVQXuj9sJeoY51JjAPjifKVY6V3plPLCEmcMx8QGleHctk9Aok4OO5vlJjCL8CcqzpoMzlL8UPYCAZyxlKrnDiOha2Y2DK/pz0a7vbvR1KBqm/Tm9K/DSkrFlEfG1PBYtNsWwFoPfO8L94O2n+X+DTUtyrmuTo3twPJTQHlNowCkMgCSP5a7zctqMcQjCNK9eMf/DrEd/szA6VXPh7XPYAdEcbjvEOyp7MsW2FRPQeroN/2rTpQhpZzcc/gnFzvqHmExNnIzIDCPDqqPhoV2vORlh7rnqPQIJdf/WcpNrogr+XG8LaoCXSsCXBAMFhp/0jTWF68vY1aFjuJvSWGpM5/saOqpex+Nd5hkI329naUL1NGe1wQWSQ5hcbhqiK3/xV4AdOWsIQGhLY7vbQMNgUbAk+7ZVbtZUvFCbvu4b7vG2HhEtYXu+n5hV+/Ie0OmGtpSKLeZS6WCS2FBidHD5g1iZRTkt9AW0cCTC92Fw+ooCBwVerg6XBPo0iBMKqeM/wJLEG0GFcbEhAfNzauS9jJEMlrA0xSJiaVPZVqIpqtIxiySA+nK68t2g1zt4z7lBMe6kBpcEZjspWc7GhcPIeHbLM5mKc1SUa4fw0qacMMpZgCY0VoKsqynFNQ77lO8OtFvElbKyggxT1L+XPP2h/yERlsKhWqGZ6k7SN8IRNCyBFocaAZBTCZptESV0k9A916YM4JL+5NKe6JUAwiGEMtVEQ==")!
 
-    public let callLinkPublicParams = Data(base64Encoded: "AByD873dTilmOSG0TjKrvpeaKEsUmIO8Vx9BeMmftwUs9v7ikPwM8P3OHyT0+X3EUMZrSe9VUp26Wai51Q9I8mdk0hX/yo7CeFGJyzoOqn8e/i4Ygbn5HoAyXJx5eXfIbqpc0bIxzju4H/HOQeOpt6h742qii5u/cbwOhFZCsMIbElZTaeU+BWMBQiZHIGHT5IE0qCordQKZ5iPZom0HeFa8Yq0ShuEyAl0WINBiY6xE3H/9WnvzXBbMuuk//eRxXgzO8ieCeK8FwQNxbfXqZm6Ro1cMhCOF3u7xoX83QhpN")!
+    public let callLinkPublicParams = Data(base64Encoded: "AHq9iY+rM4H2zyhfsXiL7ScDtulpQYMM0sCs4ynOp6sdXLon/fCOypRFDZGJfDzWvXUqrg+C8H7V0viDnCoE0D/8Th6j7/8aAj6QPN1FSXkEnEFveb6JocYBzw9SHAlvHs7GUxHR49pXPBpYnghVDL11m+FGUqHTF/YsrR6Mbtc5qgy7cgqx5WTYSq5gbLZZ0qf4nf0yua1+JFZwpv7frlVYn9md6rETgahM2RWSkCoQgVBenTELh1IJ2b86EptoFSopE13uDLfrtEIly1Ut8+swLBOiIk4UKxFjeBtQWI4l")!
 
-    public let backupServerPublicParams = Data(base64Encoded: "AJwNSU55fsFCbgaxGRD11wO1juAs8Yr5GF8FPlGzzvdJJIKH5/4CC7ZJSOe3yL2vturVaRU2Cx0n751Vt8wkj1bozK3CBV1UokxV09GWf+hdVImLGjXGYLLhnI1J2TWEe7iWHyb553EEnRb5oxr9n3lUbNAJuRmFM7hrr0Al0F0wrDD4S8lo2mGaXe0MJCOM166F8oYRQqpFeEHfiLnxA1O8ZLh7vMdv4g9jI5phpRBTsJ5IjiJrWeP0zdIGHEssUeprDZ9OUJ14m0v61eYJMKsf59Bn+mAT2a7YfB+Don9O")!
+    public let backupServerPublicParams = Data(base64Encoded: "AMr+n74tOJJ9fpKsLUyp9ga3Lt0tGLBMrDrqCpyyB98cXGaP1S5p81yWF9L+KsvDKkW7uF8PPUrIG9fre72/HQ9QNiOM6bkcG5hFzCvAnlkLjsLtbT9HzlSVygA9fvWdCooPSNxnn2vtXfI8WIzDOiu+VdWFD0UpU0ZH9/iBV2gWks//2Nktupl6H370Aw6t9yMBIpaznWtJ2bi4UTLwxVuwcVJw0+tIKbLT15MACMN+UrNvTRAsIp700m8okel2UO5iPnMa5LCw9t86hVo1Xu7qO7clUWkPSSSsxB4Dpvt3")!
 }
 
 // MARK: - Staging
