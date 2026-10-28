@@ -53,8 +53,8 @@ DEPENDENCIES:
   - GRDB.swift/SQLCipher
   - LibMobileCoin/CoreHTTP (from `https://github.com/signalapp/libmobilecoin-ios-artifacts`, tag `signal/6.0.2`)
   - libPhoneNumber-iOS (from `https://github.com/signalapp/libPhoneNumber-iOS`, branch `signal-master`)
-  - LibSignalClient (from `https://github.com/signalapp/libsignal.git`, tag `v0.77.1`)
-  - LibSignalClient/Tests (from `https://github.com/signalapp/libsignal.git`, tag `v0.77.1`)
+  - LibSignalClient (from `../libsignal`)
+  - LibSignalClient/Tests (from `../libsignal`)
   - libwebp (from `./ThirdParty/libwebp.podspec.json`)
   - lottie-ios
   - Mantle (from `https://github.com/signalapp/Mantle`, branch `signal-master`)
@@ -89,8 +89,7 @@ EXTERNAL SOURCES:
     :branch: signal-master
     :git: https://github.com/signalapp/libPhoneNumber-iOS
   LibSignalClient:
-    :git: https://github.com/signalapp/libsignal.git
-    :tag: v0.77.1
+    :path: "../libsignal"
   libwebp:
     :podspec: "./ThirdParty/libwebp.podspec.json"
   Mantle:
@@ -119,9 +118,6 @@ CHECKOUT OPTIONS:
   libPhoneNumber-iOS:
     :commit: 60482f7c0341e7c13e037ae1edbe8b359de7e6f3
     :git: https://github.com/signalapp/libPhoneNumber-iOS
-  LibSignalClient:
-    :git: https://github.com/signalapp/libsignal.git
-    :tag: v0.77.1
   Mantle:
     :commit: e7e46253bb01ce39525d90aa69ed9e85e758bfc4
     :git: https://github.com/signalapp/Mantle
@@ -158,6 +154,6 @@ SPEC CHECKSUMS:
   SwiftProtobuf: 3697407f0d5b23bedeba9c2eaaf3ec6fdff69349
   YYImage: f1ddd15ac032a58b78bbed1e012b50302d318331
 
-PODFILE CHECKSUM: 4539b4245dd41d79e6c76ca7917f9f129514c37d
+PODFILE CHECKSUM: 627a236b813859e5f634a13ba02e9878cb801914
 
 COCOAPODS: 1.15.2
