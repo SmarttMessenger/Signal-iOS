@@ -7,6 +7,8 @@ import SignalServiceKit
 import SignalUI
 
 final class AppearanceSettingsTableViewController: OWSTableViewController2 {
+    private static let showsAppIconRow = false // [Smartt: app-identity] Smartt ships no alternate app icons
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -44,6 +46,7 @@ final class AppearanceSettingsTableViewController: OWSTableViewController2 {
             let vc = ColorAndWallpaperSettingsViewController()
             self.navigationController?.pushViewController(vc, animated: true)
         })
+        if Self.showsAppIconRow { // [Smartt: app-identity]
         firstSection.add(
             OWSTableItem(
                 customCellBlock: { [weak self] in
@@ -63,6 +66,7 @@ final class AppearanceSettingsTableViewController: OWSTableViewController2 {
                 }
             )
         )
+        } // [Smartt: app-identity]
 
         contents.add(firstSection)
 

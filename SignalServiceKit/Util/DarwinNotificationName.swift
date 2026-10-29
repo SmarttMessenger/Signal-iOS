@@ -6,18 +6,24 @@
 import Foundation
 
 public struct DarwinNotificationName: ExpressibleByStringLiteral {
-    public static let nseDidReceiveNotification: DarwinNotificationName = "org.signal.nseDidReceiveNotification"
-    public static let mainAppHandledNotification: DarwinNotificationName = "org.signal.mainAppHandledNotification"
-    public static let mainAppLaunched: DarwinNotificationName = "org.signal.mainAppLaunched"
-    static let primaryDBFolderNameDidChange: DarwinNotificationName = "org.signal.primaryDBFolderNameDidChange"
+    // [Smartt: app-identity]
+    // Darwin notifications are system-wide. Prefixing them with our own bundle ID prefix
+    // keeps Signal, installed on the same phone, from posting or answering ours.
+    private static let prefix = Bundle.main.bundleIdPrefix
+
+    public static let nseDidReceiveNotification = DarwinNotificationName("\(prefix).nseDidReceiveNotification")
+    public static let mainAppHandledNotification = DarwinNotificationName("\(prefix).mainAppHandledNotification")
+    public static let mainAppLaunched = DarwinNotificationName("\(prefix).mainAppLaunched")
+    static let primaryDBFolderNameDidChange = DarwinNotificationName("\(prefix).primaryDBFolderNameDidChange")
 
     static func sdsCrossProcess(for type: AppContextType) -> DarwinNotificationName {
-        DarwinNotificationName("org.signal.sdscrossprocess.\(type)")
+        DarwinNotificationName("\(prefix).sdscrossprocess.\(type)")
     }
 
     static func connectionLock(for priority: Int) -> DarwinNotificationName {
-        return DarwinNotificationName("org.signal.connection.\(priority)")
+        return DarwinNotificationName("\(prefix).connection.\(priority)")
     }
+    // [/Smartt]
 
     public typealias StringLiteralType = String
 
